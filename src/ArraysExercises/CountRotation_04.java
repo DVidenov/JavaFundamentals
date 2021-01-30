@@ -10,7 +10,7 @@ public class CountRotation_04 {
 
         int countRotation = Integer.parseInt(scanner.nextLine());
 
-        for (int rotation = 1; rotation < countRotation; rotation++) {
+        for (int rotation = 0; rotation < countRotation; rotation++) {
             int firstNumber = numbers[0];
             for (int index = 0; index < numbers.length - 1; index++) {
                 numbers[index] = numbers[index + 1];
