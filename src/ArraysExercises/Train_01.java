@@ -16,7 +16,7 @@ public class Train_01 {
         }
         int sum = 0;
         for (int number : array) {
-            System.out.println(number + " ");
+            System.out.print(number + " ");
             sum += number;
         }
         System.out.println(sum);
