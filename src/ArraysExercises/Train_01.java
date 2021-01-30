@@ -19,6 +19,7 @@ public class Train_01 {
             System.out.print(number + " ");
             sum += number;
         }
+        System.out.println();
         System.out.println(sum);
         //System.out.println(Arrays.stream(array).max());
     }
