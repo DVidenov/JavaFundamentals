@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class exercise_06 {
+public class EqualSums_06 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int [] numbers = Arrays.stream(scanner.nextLine().split(" "))
