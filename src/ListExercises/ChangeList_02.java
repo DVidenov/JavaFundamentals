@@ -36,3 +36,60 @@ public class ChangeList_02 {
         }
     }
 }
+
+
+
+
+/*
+package Lists.exercises;
+
+        import java.util.Arrays;
+        import java.util.List;
+        import java.util.Scanner;
+        import java.util.stream.Collectors;
+
+public class ChangeList {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        List<Integer> list = Arrays.stream(scanner.nextLine().split("\\s+"))
+                .map(Integer::parseInt)
+                .collect(Collectors.toList());
+
+        String input = scanner.nextLine();
+        while (!input.equals("end")) {
+            String[] commands = input.split("\\s+");
+
+            switch (commands[0]) {
+
+                case "Delete":
+                    int elementToDelete = Integer.parseInt(commands[1]);
+                    deleteElement(list, elementToDelete);
+                    break;
+                case "Insert":
+                    int elementToInsert = Integer.parseInt(commands[1]);
+                    int position = Integer.parseInt(commands[2]);
+                    list.add(position, elementToInsert);
+                    break;
+            }
+
+            input = scanner.nextLine();
+        }
+
+        System.out.println(list.toString().replaceAll("[\\[\\],]", ""));
+
+    }
+
+    private static void deleteElement(List<Integer> list, int elementToDelete) {
+        int i = 0;
+        while(i < list.size()){
+            if(list.get(i) == elementToDelete){
+                list.remove(i);
+            }
+            else{
+                i++;
+            }
+        }
+    }
+}*/

@@ -8,32 +8,27 @@ import java.util.Scanner;
 public class HouseParty_03 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int countCommands = Integer.parseInt(scanner.nextLine());
-        List<String> guests = new ArrayList<>();
+        int commandsNumber = Integer.parseInt(scanner.nextLine());
+        List<String> names = new ArrayList<>();
 
-        for (int i = 0; i <= countCommands; i++) {
+        for (int i = 0; i < commandsNumber; i++) {
             String command = scanner.nextLine();
-            String [] tokens = command.split("\\s+");
-            String name = tokens [0];
-            if (tokens[2].equals("going!")){ // going
-                if (guests.contains(name)){
-                    System.out.printf("%s is already in the list!\n", name);
-                } else {
-                    guests.add(name);
+            String[] token = command.split("\\s+");
+            if (token[2].equals("going!")){
+                if (!names.contains(token[0])){
+                    names.add(token[0]);
+                }else {
+                    System.out.printf("%s is already in the list!\n", token[0]);
                 }
-            } else if (tokens[2].equals("not")){ // not going
-                if (guests.contains(name)){
-                    guests.remove(name);
-                } else {
-                    System.out.printf("%s is not in the list!\n", name);
+            }else if (token[2].equals("not")){
+                if (names.contains(token[0])){
+                    names.remove(token[0]);
+                } else{
+                    System.out.printf("%s is not in the list!\n", token[0]);
                 }
             }
         }
-        printNames(guests);
-    }
-
-    private static void printNames(List<String> guests) {
-        for (String name : guests) {
+        for (String name:names) {
             System.out.println(name);
         }
     }
