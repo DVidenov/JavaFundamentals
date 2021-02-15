@@ -10,8 +10,12 @@ public class AppendArrays_07 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        List<String> input = Arrays.stream(scanner.nextLine().split("|"))
-                .map(String::toString).collect(Collectors.toList());
+        List<String> arrays = Arrays.stream(scanner.nextLine().split("\\|"))
+                .collect(Collectors.toList());
+        Collections.reverse(arrays);
+        String toPrint = arrays.toString().replaceAll("[\\]\\[,]", "").trim();
+        toPrint = toPrint.replaceAll("\\s+", " ");
 
+        System.out.println(toPrint);
     }
 }
