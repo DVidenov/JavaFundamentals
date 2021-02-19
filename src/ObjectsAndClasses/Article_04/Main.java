@@ -1,4 +1,4 @@
-package ObjectsAndClasses.Article;
+package ObjectsAndClasses.Article_04;
 
 import java.util.Scanner;
 
