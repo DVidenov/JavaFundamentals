@@ -34,4 +34,9 @@ public class Student {
         this.secondName = secondName;
         this.grade = grade;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s %s: %.2f", firstName, secondName, grade);
+    }
 }
