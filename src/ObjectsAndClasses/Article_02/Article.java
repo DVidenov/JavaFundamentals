@@ -1,4 +1,4 @@
-package ObjectsAndClasses.Article_04;
+package ObjectsAndClasses.Article_02;
 
 public class Article {
     private String title;
