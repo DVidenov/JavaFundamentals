@@ -18,10 +18,10 @@ public class Main {
         List <AdvertisementMessage> advMessage = new ArrayList<>();
         int n = Integer.parseInt(scanner.nextLine());
         for (int i = 0; i < n; i++) {
-            int random_phrases = (int)(Math.random() * (5) + 0);
-            int random_events = (int)(Math.random() * (5) + 0);
-            int random_authors = (int)(Math.random() * (7) + 0);
-            int random_cities = (int)(Math.random() * (4) + 0);
+            int random_phrases = (int)(Math.random() * 4);
+            int random_events = (int)(Math.random() * 4);
+            int random_authors = (int)(Math.random() * 6);
+            int random_cities = (int)(Math.random() * 3);
             phrases = phrases.split("@")[random_phrases];
             events = events.split("@")[random_events];
             authors = authors.split("@")[random_authors];
@@ -29,6 +29,8 @@ public class Main {
             AdvertisementMessage advMess = new AdvertisementMessage(phrases, events, authors, cities);
             advMessage.add(advMess);
         }
-        System.out.println(advMessage);
+        for (AdvertisementMessage advert:advMessage) {
+            System.out.println(advert);
+        }
     }
 }
