@@ -12,6 +12,7 @@ public class RemoveSubstring {
         while (input.contains(wordToRemove)) {
             input = removeOccurrence(input, wordToRemove);
         }
+        System.out.println(input);
     }
 
     private static String removeOccurrence(String input, String wordToRemove) {
