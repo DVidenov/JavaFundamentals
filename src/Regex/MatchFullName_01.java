@@ -13,8 +13,9 @@ public class MatchFullName_01 {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(listOfNames);
 
-        while (matcher.find()){
-            System.out.print(matcher.group("firstName") + " " + matcher.group("lastName") + " ");
+
+        while(matcher.find()){
+            System.out.print(matcher.group("firstName")+" " + matcher.group("lastName") + " ");
         }
     }
 }
