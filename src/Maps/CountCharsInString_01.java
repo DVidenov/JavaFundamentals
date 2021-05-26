@@ -21,7 +21,7 @@ public class CountCharsInString_01 {
                 //не сме срещали символа
                 lettersCount.put(currentSymbol, 1);
             } else {
-                //срещали сме символа
+                //срещали сме символа.
                 lettersCount.put(currentSymbol, lettersCount.get(currentSymbol) + 1);
             }
         }
